@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    margin: 50px auto 30px;
+}
+
+
+#container{
+    padding: 20px;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.product{
+    border: 1px solid;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 5px;
+
+}
+
+
+.product-img{
+    width: 140px;
+    height: 120px;
+    margin: 10px
+}
+
+
+form{
+    text-align: center;
+}
+
