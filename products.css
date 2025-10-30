@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body{
+    font-size: 16px;
+}
+
 h1 {
     text-align: center;
     margin: 50px auto 30px;
@@ -45,3 +49,33 @@ form{
     text-align: center;
 }
 
+
+#container{
+    border: 1px solid whitesmoke;
+    margin: 50px 20px;
+    padding: 20px 10px;
+}
+
+.prev-price{
+    color: grey;
+    text-decoration: line-through;
+    font-size: 0.85rem;
+}
+
+#search-btn{
+    background: blue;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+
+#search-input{
+    padding: 10px 20px;
+    caret-color: blue;
+    font-size: 1.2rem;
+    outline-color: blue;
+    border-radius: 20px;
+}
