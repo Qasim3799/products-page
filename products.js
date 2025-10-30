@@ -1,5 +1,5 @@
 form = document.querySelector('form')
-searchItem = document.getElementById('search-input')
+searchInput = document.getElementById('search-input')
 const container = document.getElementById('container')
 
 const products = [
@@ -12,25 +12,32 @@ const products = [
 const filterProducts = event => {
     event.preventDefault();
     
-    searchedItem = searchItem.value
+    searchedItem = searchInput.value.trim()
 
-    const output = products.filter((item) => {
-        return item.name.toLowerCase().includes(searchedItem)
+    
+    const filteredProducts = products.filter((item) => {
+        return item.name.toLowerCase().includes(searchedItem.toLowerCase())
     })
 
     container.innerHTML = ''
 
+    if(filteredProducts.length > 0){
+            filteredProducts.forEach((item)=> {
+            container.innerHTML += `
+                <div class='product'>
+                    <img class='product-img' src='${item.img}'>
+                    <p class='product-name'>${item.name}</p>
+                    <p class='price'>${item.price}</p>
+                    <p class='prev-price'>${item.prevPrice}</p>
+                </div>
+            `
+        })
+    }
+
+    else{
+        container.innerHTML = `<p id='not-found'> Product Not Found </p>`
+    }
     
-    output.forEach((item)=> {
-    container.innerHTML += `
-        <div class='product'>
-            <img class='product-img' src='${item.img}'>
-            <p class='product-name'>${item.name}</p>
-            <p class='price'>${item.price}</p>
-            <p class='prev-price'>${item.prevPrice}</p>
-        </div>
-    `
-})
 
 }
 
